@@ -1,0 +1,14 @@
+Charles Werk
+Week 1 Homework
+CLI VS. GUI
+
+Command Line Interface (CLI) and Graphical User Interface (GUI) represent two different approaches to interacting with computers. They each have its own advantages and disadvantages.
+For example, command line interface relies on using text-based commands entered through a terminal or console. It is not beginner friendly and is a preferred choice among experienced 
+users and administrators due to the capabilities of scripting and other powerful tools. 
+
+On the other hand, GUI provides a visual interface with icons, buttons, and windows, making it more user-friendly, especially for those less familiar with command-based interactions. 
+GUIs are widespread in operating systems like Windows, macOS, and various Linux distributions, offering a more intuitive experience for everyday users. However, GUIs can be resource-intensive and may limit the flexibility provided by CLI.
+
+The choice between CLI and GUI often depends on the user's preferences, expertise, and the specific task at hand. While CLI excels in automation and precise control, GUI focuses on accessibility and ease of use. 
+Modern systems often incorporate both interfaces, allowing users to leverage the strengths of each depending on their needs and proficiency level. Personally, I prefer a mixture of both when it comes to programming, but generally
+a good GUI makes the workspace easier to manage and organize. 
