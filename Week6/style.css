@@ -6,6 +6,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body, html {
@@ -14,6 +15,19 @@ body, html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    color: #1D1E2A;
+    font-size: 2.7rem;
+}
+
+h2 {
+    color: #D15A44;
+    font-size: 2.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 
 /* DESKTOP NAV */
@@ -35,6 +49,7 @@ nav {
 }
 
 .nav-links {
+    display: flex;
     gap: 2rem;
     list-style: none;
     font-size: 1.2rem;
@@ -57,44 +72,45 @@ a:hover {
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(207, 90, 37, 0.5), rgba(48, 133, 151, 0.435)), url("./assets/orange_sunset.jpg");
+    height: 83vh;
+    background-image: linear-gradient(rgba(169, 98, 63, 0.5), rgba(49, 127, 143, 0.435)), url("./assets/orange_sunset.jpg");
     background-blend-mode: darken;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+
+
 }
 
 .hero-text {
-    color: white;
+    color: #231815;
     margin-bottom: 5%;
 
 }
 
 .hero-text h2 {
     color: #1D1E2A;
-    font-size: 3.7rem;
+    font-size: 2.7rem;
 }
 
 .hero-text h1 {
     color: #D15A44;
-    font-size: 3.7rem;
+    font-size: 2.7rem;
 }
 
 .hero h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 #profile-pic {
     max-width: 50%;
-    margin-bottom: 20%;
+    margin-bottom: 0;
+    max-height: 100%;
 }
 
 
-
-
 .companies {
+    background-color: rgba(48, 118, 151, 0.435);
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -107,4 +123,154 @@ a:hover {
     align-content: center;
 
 
+}
+
+.about-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.hobbies-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.hobby-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.hobby-card img {
+    max-width: 40%;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.hobby-card-content {
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.hobby-card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.hobby-card-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.projects-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.projects-section h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.project-card img {
+    /* max-width: 40%; */
+    border-radius: 8px;
+    width: 300px;
+    height: 20%;
+    /* Adjust as needed */
+}
+
+.project-card-content {
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.project-card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.contact-section {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(155, 160, 164, 0.687), rgba(61, 20, 20, 0.516)), url("./assets/IMG_7256.JPG");
+}
+
+.contact-section h2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
