@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="terms">Accept Terms:</label>
+        <input type="checkbox" id="terms" name="terms"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Fields to validate
+            var name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var terms = document.getElementById('terms');
+
+            // Remove existing error styles
+            name.classList.remove('error');
+            email.classList.remove('error');
+            terms.classList.remove('error');
+
+            // Check if name is filled
+            if (!name.value.trim()) {
+                name.classList.add('error');
+                name.focus();
+                return; // Stop the function
+            }
+
+            // Check if email is filled
+            if (!email.value.trim()) {
+                email.classList.add('error');
+                email.focus();
+                return; // Stop the function
+            }
+
+            // Check if terms are accepted
+            if (!terms.checked) {
+                terms.classList.add('error');
+                terms.focus();
+                return; // Stop the function
+            }
+
+            // If all fields are valid, you can proceed to submit the form or handle it as needed
+            // For demonstration, we'll log to the console and not actually submit
+            console.log("All fields are valid. Form can be submitted now.");
+        });
+    </script>
+
+</body>
+
+</html>
