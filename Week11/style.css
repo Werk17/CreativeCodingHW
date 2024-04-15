@@ -352,3 +352,45 @@ footer {
     width: 100vw;
     /* Full width of the viewport */
 }
+
+.instructions {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    /* Ensure it's on top */
+}
+
+.instructions h3 {
+    margin-top: 0;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.player {
+    background-color: blue;
+}
+
+.obstacle {
+    background-color: red;
+}
+
+.exit {
+    background-color: green;
+}
