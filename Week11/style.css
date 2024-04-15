@@ -342,3 +342,13 @@ footer {
 .footer-section a:hover {
     color: rgb(184, 78, 46);
 }
+
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* This makes sure that the container is the full height of the viewport */
+    width: 100vw;
+    /* Full width of the viewport */
+}
