@@ -43,29 +43,16 @@ function createObstacles() {
       x: random(width),
       y: random(height),
       size: random(20, 40),
-      color: "green",
+      color: "red",
     },
     { x: random(width), y: random(height), size: random(20, 40), color: "red" },
     {
       x: random(width),
       y: random(height),
       size: random(20, 40),
-      color: "green",
+      color: "red",
     },
     { x: random(width), y: random(height), size: random(20, 40), color: "red" },
-    {
-      x: random(width),
-      y: random(height),
-      size: random(20, 40),
-      color: "green",
-    },
-    { x: random(width), y: random(height), size: random(20, 40), color: "red" },
-    {
-      x: random(width),
-      y: random(height),
-      size: random(20, 40),
-      color: "green",
-    },
   ];
   return obs;
 }
