@@ -1,6 +1,7 @@
 let player;
 let obstacles = [];
 let exitPosition;
+let collisionEnabled = true; // Collision toggle
 
 function setup() {
   let canvas = createCanvas(800, 600);
@@ -18,12 +19,24 @@ function draw() {
   drawExit(exitPosition);
   drawMouseObject();
   checkWinCondition();
-  checkPlayerObstacleCollision();
+  if (collisionEnabled) {
+    checkPlayerObstacleCollision();
+    checkPlayerWallCollision(); // Check for collisions if enabled
+  } else {
+    wrapAround(player); // Handle player wrapping if collision is disabled
+  }
   displayPlayerHealth();
 }
 
 function createPlayer() {
   return { x: 100, y: 100, size: 30, vel: createVector(0, 0), health: 100 };
+}
+
+function keyPressed() {
+  if (key === "c" || key === "C") {
+    collisionEnabled = !collisionEnabled; // Toggle collision state
+    console.log("Collision Enabled: " + collisionEnabled);
+  }
 }
 
 function handlePlayerMovement() {
@@ -57,10 +70,12 @@ function createObstacles() {
   return obs;
 }
 
-function moveObstacle(obs, index) {
-  obs.x += random(-15, 15);
-  obs.y += random(-15, 15);
-  wrapAround(obs);
+function moveObstacle(obs) {
+  obs.x += random(-5, 5);
+  obs.y += random(-5, 5);
+  if (!collisionEnabled) {
+    wrapAround(obs);
+  }
   fill(obs.color);
   ellipse(obs.x, obs.y, obs.size);
 }
@@ -120,10 +135,21 @@ function displayPlayerHealth() {
 
 function checkPlayerWallCollision() {
   let radius = player.size / 2;
-  if (player.x - radius < 0) player.x = radius;
-  if (player.x + radius > width) player.x = width - radius;
-  if (player.y - radius < 0) player.y = radius;
-  if (player.y + radius > height) player.y = height - radius;
+  if (
+    player.x - radius < 0 ||
+    player.x + radius > width ||
+    player.y - radius < 0 ||
+    player.y + radius > height
+  ) {
+    if (collisionEnabled) {
+      // Prevent moving beyond the canvas borders
+      player.x = constrain(player.x, radius, width - radius);
+      player.y = constrain(player.y, radius, height - radius);
+    } else {
+      // Wrap around the canvas edges
+      wrapAround(player);
+    }
+  }
 }
 
 function checkPlayerObstacleCollision() {

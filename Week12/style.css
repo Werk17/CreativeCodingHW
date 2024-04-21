@@ -355,12 +355,12 @@ footer {
 
 .instructions {
     position: fixed;
-    top: 30px;
+    top: 200px;
     right: 20px;
     background: rgba(255, 255, 255, 0.8);
     padding: 15px;
     border-radius: 5px;
-    width: 250px;
+    width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     z-index: 1000;
@@ -374,6 +374,10 @@ footer {
 .instructions ul {
     list-style: none;
     padding: 0;
+}
+
+.instructions p {
+    margin: 10px 5px;
 }
 
 .instructions li span {
