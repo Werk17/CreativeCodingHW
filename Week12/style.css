@@ -1,0 +1,396 @@
+/* GENERAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Poppins", "sans-serif";
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: #1D1E2A;
+    font-size: 2.7rem;
+}
+
+h2 {
+    color: #D15A44;
+    font-size: 2.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/* DESKTOP NAV */
+
+nav {
+    display: flex;
+}
+
+.nav-links ul li a {
+    color: #191f24;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    background-color: black;
+}
+
+.logo img {
+    max-height: 17vh;
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;
+    color: #1D1E2A;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+a:hover {
+    color: rgb(184, 78, 46);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 83vh;
+    background-image: linear-gradient(rgba(169, 98, 63, 0.5), rgba(49, 127, 143, 0.435)), url("./assets/orange_sunset.jpg");
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.hero-text {
+    color: #231815;
+    margin-bottom: 5%;
+
+}
+
+.hero-text h2 {
+    color: #1D1E2A;
+    font-size: 2.7rem;
+}
+
+.hero-text h1 {
+    color: #D15A44;
+    font-size: 2.7rem;
+}
+
+.hero h3 {
+    font-size: 1.2rem;
+}
+
+#profile-pic {
+    max-width: 50%;
+    margin-bottom: 0;
+    max-height: 100%;
+}
+
+
+.companies {
+    background-color: rgba(48, 118, 151, 0.435);
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.companies img {
+    max-width: 300px;
+    max-height: 150px;
+    margin: 12px;
+    align-content: center;
+
+
+}
+
+.about-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.hobbies-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.hobby-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.hobby-card img {
+    max-width: 40%;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.hobby-card-content {
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.hobby-card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.hobby-card-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.projects-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.projects-section h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.project-card img {
+    /* max-width: 40%; */
+    border-radius: 8px;
+    width: 300px;
+    height: 20%;
+    /* Adjust as needed */
+}
+
+.project-card-content {
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.project-card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.contact-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-image: url("./assets/contact-section.png");
+}
+
+.contact-section h2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f1f1f1b3;
+    padding: 20px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul,
+.footer-section p {
+    margin: 4px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(184, 78, 46);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-container a {
+    color: black;
+    text-decoration: none;
+    /* text-decoration-color: #007bff; */
+}
+
+.footer-section a:hover {
+    color: rgb(184, 78, 46);
+}
+
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* This makes sure that the container is the full height of the viewport */
+    width: 100vw;
+    /* Full width of the viewport */
+}
+
+.instructions {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    /* Ensure it's on top */
+}
+
+.instructions h3 {
+    margin-top: 0;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.player {
+    background-color: blue;
+}
+
+.obstacle {
+    background-color: red;
+}
+
+.exit {
+    background-color: green;
+}
