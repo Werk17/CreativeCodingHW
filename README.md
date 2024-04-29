@@ -4,7 +4,18 @@
 
 In "Defenders of the Realm," players will construct a variety of defensive towers along a path to prevent waves of enemies from reaching their base. The game will feature an interactive interface created with p5.js, allowing players to choose from different tower types and strategically place them on the game map. As players progress, they can upgrade towers, enhancing their range, damage, and special abilities.
 
-## Inspiration and Related Work
+### Core Mechanics
+
+- **Resource Management:** Players automatically accumulate mana over time. This mana is a critical resource used to deploy troops, each with distinct mana costs.
+- **Troop Deployment:** Players strategically deploy troops from their base along predetermined paths to intercept and combat advancing enemy waves. Troops continue their advance until they are destroyed or reach the enemy base.
+- **Enemy Waves:** The game features progressively challenging enemy waves that vary in strength and number. Each wave is designed to test and potentially exploit the player's current defense strategy.
+- **Enemy Collision:** When player troops and enemy units meet on the path, they engage in combat, stopping their advance to fight until one is destroyed.
+
+### Game Elements
+
+- **Troops:** A variety of troop types are available for deployment, each featuring unique abilities and costs, allowing for diverse strategic options.
+- **Enemy AI:** The enemy AI adapts its strategy based on the player's actions, deploying units that counter the player’s troop composition effectively.
+- **Levels:** The game includes multiple levels, each with increasing difficulty and unique maps that require players to adapt their strategies.
 
 **Inspiration:**
 
@@ -31,11 +42,11 @@ In "Defenders of the Realm," players will construct a variety of defensive tower
 
 **Detailed Timeline:**
 
-- **Week 1**: Setup basic game environment and player input handling.
-- **Week 2**: Implement basic enemy types and simple pathfinding.
-- **Week 2**: Develop tower placement and firing mechanics.
-- **Week 3**: Introduce tower upgrades and advanced enemy waves.
-- **Week 3**: Final testing, debugging, and deployment.
+## Work Plan
+
+- **Week 1:** Basic game setup and mechanics coding.
+- **Week 2:** Implementation of the troop deployment and resource management system.
+- **Week 3:** Enemy AI development and level design.
 
 ## Progress This Week
 
