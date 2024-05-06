@@ -5,23 +5,15 @@ class GameController {
   }
 
   update() {
-    // Update the game model
     this.model.update();
   }
 
   handleMousePressed() {
-    // Check if a troop type is selected and spawn troop if clicked on game area
-    let mouseXAdjusted = mouseX - 10; // Assuming 10px padding for UI
-    let mouseYAdjusted = mouseY - 50;
-
-    if (mouseYAdjusted % 20 === 0 && mouseXAdjusted < 200) {
-      // Assuming UI element positions for troop types
-      let index = mouseYAdjusted / 20;
-      this.model.selectTroopType(TROOP_TYPES[index]);
+    // Check if a troop type button was clicked
+    if (mouseX >= 10 && mouseX <= 160 && mouseY >= 50 && mouseY <= 140) {
+      this.view.selectTroopButton(mouseX, mouseY);
     } else {
-      if (this.model.selectedTroopType) {
-        this.model.spawnTroop(mouseX, mouseY);
-      }
+      this.model.spawnTroop(); // Spawn on the left side near the base
     }
   }
 }

@@ -45,12 +45,12 @@ nav {
 nav {
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 13vh;
     background-color: black;
 }
 
 .logo img {
-    max-height: 17vh;
+    max-height: 10vh;
     margin-top: 10px;
 }
 
@@ -397,4 +397,31 @@ footer {
 
 .exit {
     background-color: yellow;
+}
+
+
+#sketch-holder {
+    width: 800px;
+    /* Match the width of your canvas */
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#game-container {
+    margin: auto;
+    text-align: left;
+    width: 70%;
+
+}
+
+#game-title {
+    margin: auto;
+    text-align: left;
+
+}
+
+#game-intro {
+    margin: auto;
+
 }

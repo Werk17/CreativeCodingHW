@@ -2,18 +2,18 @@ import GameModel from "./model/gameModel.js";
 import GameView from "./view/gameView.js";
 import GameController from "./controller/gameController.js";
 
-// Assuming global access to models, view, and controller
 let gameModel;
 let gameView;
 let gameController;
 
 function setup() {
-  createCanvas(800, 600);
+  const canvas = createCanvas(800, 600);
+  canvas.parent("sketch-holder"); // Set the parent of the canvas
   gameModel = new GameModel();
   gameView = new GameView(gameModel);
   gameController = new GameController(gameModel, gameView);
 
-  frameRate(30); // Set the drawing to 30 frames per second
+  frameRate(30);
 }
 
 function draw() {

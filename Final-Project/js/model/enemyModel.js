@@ -1,33 +1,20 @@
 class Enemy {
-  constructor(x, y, health, damage, speed) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.health = health;
-    this.damage = damage;
-    this.speed = speed; // Speed at which the enemy approaches the player's base
+    this.speed = 1.5; // Speed of enemy movement
+    this.damage = 5; // Damage to apply to troops
+    this.health = 65; // Health of the enemy
+    this.fighting = false; // Indicates if the enemy is currently fighting
   }
 
-  update(troops) {
-    // Move the enemy towards the player's base
-    this.x -= this.speed;
-
-    // Check for collision with troops and deal damage
-    for (let i = troops.length - 1; i >= 0; i--) {
-      let troop = troops[i];
-      if (dist(this.x, this.y, troop.x, troop.y) < 20) {
-        // Assuming both have a radius of 20
-        troop.health -= this.damage;
-        if (troop.health <= 0) {
-          troops.splice(i, 1); // Remove troop if dead
-        }
-        break; // Stop moving if fighting
-      }
-    }
-  }
-
-  display() {
+  draw() {
     fill(255, 0, 0); // Red color for enemies
-    ellipse(this.x, this.y, 40, 40); // Represent as a circle
+    ellipse(this.x, this.y, 20, 20);
+  }
+
+  moveLeft() {
+    this.x -= this.speed; // Move left
   }
 }
 
